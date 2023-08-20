@@ -9,7 +9,7 @@ from os.path import abspath
 ######################## DEF PART ######################################################################
 
 # Absolute paths to the files
-shortcut_path = "~/.config/kglobalshortcutsrc"
+# shortcut_path = "~/.config/kglobalshortcutsrc"
 
 
 #111 Linux distro
@@ -46,7 +46,7 @@ def copy_home_folder():
 def save_selected_values():
     selected_files = []
     if checkbox_file1_var.get():
-        selected_files.append("shortcut_path")
+        selected_files.append(os.path.expanduser("~/.config/kglobalshortcutsrc"))
     if checkbox_file2_var.get():
         selected_files.append(os.path.expanduser("~/file1.txt"))
 
